@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="post" *ngIf="post">
+      <div class="tags">
+        <span class="tag tag1">{{ post.tags[0] }}</span>
+        <span class="tag tag2">{{ post.tags[1] }}</span>
+        <span class="tag tag3" *ngIf="post.tags[2]">{{ post.tags[2] }}</span>
+      </div>
+      <div class="post-body">
+        <h2 class="title">{{ post.title }}</h2>
+        <p>
+          {{ post.body }}
+        </p>
+      </div>
+      <div class="stats">
+        <div class="reactions">
+          <p class="reaction">
+            <span><i class="fa-regular fa-thumbs-up"></i></span>
+            {{ post.reactions.likes }}
+          </p>
+          <p class="reaction">
+            <span><i class="fa-regular fa-thumbs-down"></i></span>
+            {{ post.reactions.dislikes }}
+          </p>
+        </div>
+        <div class="views">
+          <p>
+            <span><i class="fa-regular fa-eye"></i></span> {{ post.views }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="comments">
+      <div class="comment" *ngFor="let comment of comments">
+        <div class="user">
+          <img
+            src="https://i.pravatar.cc/48?u={{ comment.user.id }}"
+            alt="{{ comment.user.fullName }}"
+          />
+          <p>{{ comment.user.fullName }}</p>
+        </div>
+        <p class="body">{{ comment.body }}</p>
+        <p class="react">
+          <span><i class="fa-regular fa-thumbs-up"></i></span>
+          {{ comment.likes }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+:host {
+  ::ng-deep .btn-login {
+    background-color: #087f5b;
+    background-image: none;
+    border: none;
+    color: #f3f3f3;
+  }
+  ::ng-deep .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+    border-color: #12b886;
+    color: #12b886;
+  }
+  ::ng-deep .p-button:focus {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #58b960, 0 1px 2px 0 black;
+  }
+  .btn-login:hover {
+    background-color: #12b886;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 16px;
+}

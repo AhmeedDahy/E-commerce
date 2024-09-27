@@ -1,0 +1,50 @@
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+:host {
+  ::ng-deep .nav-bar {
+    position: relative;
+    color: red;
+  }
+}
+button {
+  position: absolute;
+  right: 15%;
+  top: 0;
+  margin: 12px;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 0;
+  outline: 0;
+  background-color: #087f5b;
+  color: #f3f3f3;
+  cursor: pointer;
+}
+
+@media (max-width: 1240px) {
+  .container {
+    width: 80%;
+  }
+  button {
+    right: 150px;
+  }
+}
+@media (max-width: 970px) {
+  .container {
+    width: 90%;
+  }
+  button {
+    right: 75px;
+  }
+}
+@media (max-width: 670px) {
+  .container {
+    width: 100%;
+  }
+  button {
+    right: 0;
+  }
+}

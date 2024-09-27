@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row" *ngIf="categoryDetails">
+    <div
+      class="product"
+      *ngFor="let product of categoryDetails"
+      [routerLink]="['/products', product.id]"
+    >
+      <div class="product-image-title">
+        <img src="{{ product.thumbnail }}" alt="{{ product.title }}" />
+        <div>
+          <h3>{{ product.title }}</h3>
+          <p
+            class="stock {{
+              product.availabilityStatus === 'Low Stock'
+                ? 'low-stock'
+                : product.availabilityStatus === 'In Stock'
+                ? 'in-stock'
+                : 'out-stock'
+            }}"
+          >
+            {{ product.availabilityStatus }}
+          </p>
+        </div>
+      </div>
+      <div class="product-price-rating">
+        <div class="price">
+          <p>$ {{ product.price }}</p>
+          <span>-{{ product.discountPercentage }} %</span>
+        </div>
+        <h4>
+          <span><i class="fa-regular fa-star"></i></span> {{ product.rating }}
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>

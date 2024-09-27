@@ -1,0 +1,29 @@
+<div class="container">
+  <p-card>
+    <form class="login-form">
+      <h1>Login</h1>
+      <div>
+        <input
+          type="text"
+          required
+          placeholder="Username"
+          pInputText
+          id="username"
+          name="username"
+          [(ngModel)]="username"
+        />
+      </div>
+      <div>
+        <p-password
+          placeholder="Password"
+          required
+          [feedback]="false"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+        />
+      </div>
+      <p-button label="Login" styleClass="btn-login" (click)="login()" />
+    </form>
+  </p-card>
+</div>

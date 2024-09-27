@@ -1,0 +1,69 @@
+
+<div class="container">
+  <div class="row" *ngIf="productDetails">
+    <div class="product">
+      <div class="product-image">
+        <img
+          src="{{ productDetails.images[0] }}"
+          alt="{{ productDetails.title }}"
+        />
+      </div>
+      <div class="product-info">
+        <div class="tags">
+          <div class="tag tag1" *ngIf="productDetails.brand">
+            {{ productDetails.brand }}
+          </div>
+          <div class="tag tag2" *ngIf="productDetails.tags[0]">
+            {{ productDetails.tags[0] }}
+          </div>
+          <div class="tag tag3" *ngIf="productDetails.tags[1]">
+            {{ productDetails.tags[1] }}
+          </div>
+        </div>
+        <div class="title-desc">
+          <div class="title-rating">
+            <h2>{{ productDetails.title }}</h2>
+            <h4>
+              <span><i class="fa-regular fa-star"></i></span>
+              {{ productDetails.rating }}
+            </h4>
+          </div>
+          <p>{{ productDetails.description }}</p>
+        </div>
+        <div class="price-stock-rating">
+          <p
+            class="stock {{
+              productDetails.availabilityStatus === 'Low Stock'
+                ? 'low-stock'
+                : productDetails.availabilityStatus === 'In Stock'
+                ? 'in-stock'
+                : 'out-stock'
+            }}"
+          >
+            {{ productDetails.availabilityStatus }}
+          </p>
+          <div class="price">
+            <p>$ {{ productDetails.price }}</p>
+            <span>-{{ productDetails.discountPercentage }} %</span>
+          </div>
+        </div>
+        <div class="warranty-shipping-return">
+          <table>
+            <tr>
+              <th>Return Policy</th>
+              <td>{{ productDetails.returnPolicy }}</td>
+            </tr>
+            <tr>
+              <th>Shipping Information</th>
+              <td>{{ productDetails.shippingInformation }}</td>
+            </tr>
+            <tr>
+              <th>Warranty Information</th>
+              <td>{{ productDetails.warrantyInformation }}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

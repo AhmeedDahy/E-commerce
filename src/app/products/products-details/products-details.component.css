@@ -1,0 +1,166 @@
+.container {
+  margin: 36px auto;
+  width: 70%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.product-image {
+  width: 46%;
+}
+
+.product-image img {
+  max-width: 100%;
+}
+
+.product-info {
+  width: 46%;
+  padding-top: 24px;
+  align-self: flex-start;
+  background-color: #f1f3f5;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.07);
+  margin-top: 24px;
+  border-radius: 12px;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px;
+}
+
+.tag {
+  padding: 2px 12px;
+  border-radius: 25px;
+  margin-top: 12px;
+  text-wrap: nowrap;
+}
+
+.tags .tag1 {
+  background-color: #96f2d7;
+}
+.tags .tag2 {
+  background-color: #8ce99a;
+}
+.tags .tag3 {
+  background-color: #c0eb75;
+}
+
+.title-desc {
+  margin: 12px;
+}
+
+.title-desc .title-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title-desc .title-rating h4 {
+  font-size: 18px;
+  text-wrap: nowrap;
+}
+.title-desc .title-rating h4 span {
+  color: #087f5b;
+}
+
+.price-stock-rating {
+  margin: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-stock-rating .stock {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 25px;
+  margin: 0;
+}
+
+.price-stock-rating .in-stock {
+  background-color: #8ce99a;
+}
+.price-stock-rating .low-stock {
+  background-color: #ffc078;
+}
+
+.price-stock-rating .out-stock {
+  background-color: #fa5252;
+}
+
+.price-stock-rating .price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.price-stock-rating .price p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.price-stock-rating .price span {
+  color: #f3f3f3;
+  background-color: #f03e3e;
+  padding: 4px;
+  border-radius: 25px;
+  font-weight: 400;
+}
+
+.warranty-shipping-return {
+  margin: 12px;
+}
+
+.warranty-shipping-return table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.warranty-shipping-return table th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.warranty-shipping-return table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+@media (max-width: 1240px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 970px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 670px) {
+  .container {
+    width: 100%;
+  }
+  .product-image {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .product-info {
+    width: 100%;
+    margin: 0 auto 24px;
+  }
+}

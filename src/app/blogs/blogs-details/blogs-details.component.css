@@ -1,0 +1,160 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+.container {
+  width: 70%;
+  margin: 64px auto;
+  background-color: #f8f9fa;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* /////////////////////////////////////////// */
+.post {
+  width: 46%;
+  display: grid;
+  grid-template-rows: 24px 1fr 36px;
+  row-gap: 24px;
+}
+
+.tags {
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px;
+}
+
+.tag {
+  padding: 2px 12px;
+  border-radius: 25px;
+  margin-top: 12px;
+}
+
+.tags .tag1 {
+  background-color: #96f2d7;
+}
+.tags .tag2 {
+  background-color: #8ce99a;
+}
+.tags .tag3 {
+  background-color: #c0eb75;
+}
+
+.post-body {
+  grid-row: 2;
+  margin: 12px;
+}
+
+.post-body h2 {
+  margin-bottom: 16px;
+  font-size: 30px;
+  letter-spacing: -0.5px;
+}
+.post-body p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.stats {
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 12px;
+}
+.stats .reactions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.stats span {
+  color: #087f5b;
+}
+
+/* ///////////////////////////////////// */
+.comments {
+  width: 46%;
+}
+
+.comment {
+  display: grid;
+  grid-template-rows: 64px 1fr 36px;
+  row-gap: 24px;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.07);
+  border-radius: 25px;
+  padding: 24px;
+}
+
+.user {
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.user img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.user p {
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.comment .body {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.react {
+  font-size: 18px;
+}
+.react span {
+  color: #087f5b;
+}
+
+@media (max-width: 1240px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 970px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 670px) {
+  .container {
+    width: 100%;
+  }
+  .comments {
+    width: 80%;
+    margin: 24px auto;
+  }
+  .post {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .post button {
+    font-size: 14px;
+  }
+
+  .stats {
+    text-align: center;
+    justify-self: center;
+  }
+}

@@ -1,0 +1,34 @@
+.container {
+  max-width: 800px;
+  margin: 150px auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+:host {
+  ::ng-deep .btn-login {
+    background-color: #087f5b;
+    background-image: none;
+    border: none;
+    color: #f3f3f3;
+  }
+  ::ng-deep .p-inputtext:enabled:focus {
+    box-shadow: 0 0 0 0.2rem #01a77540;
+    border-color: #12b886;
+  }
+  ::ng-deep .p-inputtext:enabled:hover {
+    border-color: #12b886;
+  }
+  ::ng-deep .p-button:focus {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #58b960, 0 1px 2px 0 black;
+  }
+
+  .btn-login:hover {
+    background-color: #12b886;
+  }
+}
